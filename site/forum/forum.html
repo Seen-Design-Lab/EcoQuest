@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EcoQuest Forums</title>
+        <!-- Add Phosphor Icons -->
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                background-color: #f6f8fa;
+            }
+
+            .container {
+                padding-top: 70px;
+                /* Add padding to prevent content overlap */
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .forum-header {
+                background-color: #0366d6;
+                color: white;
+                padding: 20px;
+                border-radius: 8px 8px 0 0;
+                margin-bottom: 20px;
+            }
+
+            .forum-categories {
+                display: grid;
+                gap: 20px;
+            }
+
+            .category {
+                background-color: white;
+                border-radius: 8px;
+                padding: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .category-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+                border-bottom: 2px solid #e1e4e8;
+            }
+
+            .topic-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .topic {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 0;
+                border-bottom: 1px solid #e1e4e8;
+            }
+
+            .topic:last-child {
+                border-bottom: none;
+            }
+
+            .topic-info {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .topic-icon {
+                font-size: 24px;
+            }
+
+            .topic-stats {
+                display: flex;
+                gap: 20px;
+                color: #6a737d;
+            }
+
+            .header-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 70px;
+                background-color: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                z-index: 99;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .back-button {
+                position: absolute;
+                top: 15px;
+                left: 20px;
+                margin-bottom: 0;
+                padding: 10px 20px;
+                background-color: #0366d6;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: all 0.2s ease;
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .back-button i {
+                font-size: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="header-container">
+            <button class="back-button" onclick="window.history.back()">
+                <i class="ph ph-arrow-left"></i>
+                Back
+            </button>
+        </div>
+
+        <div class="container">
+            <div class="forum-header">
+                <h1>🌿 EcoQuest Forums</h1>
+                <p>Join the discussion about environmental gaming!</p>
+            </div>
+
+            <div class="forum-categories">
+                <div class="category">
+                    <div class="category-header">
+                        <h2>🎮 Game Discussion</h2>
+                        <span>Topics: 156</span>
+                    </div>
+                    <ul class="topic-list">
+                        <li class="topic">
+                            <div class="topic-info">
+                                <span class="topic-icon">📌</span>
+                                <div>
+                                    <h3>Getting Started Guide</h3>
+                                    <p>Tips and tricks for new players</p>
+                                </div>
+                            </div>
+                            <div class="topic-stats">
+                                <span>Posts: 234</span>
+                                <span>Views: 15.2k</span>
+                            </div>
+                        </li>
+                        <li class="topic">
+                            <div class="topic-info">
+                                <span class="topic-icon">🌟</span>
+                                <div>
+                                    <h3>Strategy Discussion</h3>
+                                    <p>Share your gameplay strategies</p>
+                                </div>
+                            </div>
+                            <div class="topic-stats">
+                                <span>Posts: 567</span>
+                                <span>Views: 32.1k</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <div class="category-header">
+                        <h2>🌍 Environmental Topics</h2>
+                        <span>Topics: 89</span>
+                    </div>
+                    <ul class="topic-list">
+                        <li class="topic">
+                            <div class="topic-info">
+                                <span class="topic-icon">🌱</span>
+                                <div>
+                                    <h3>Conservation Projects</h3>
+                                    <p>Real-world environmental initiatives</p>
+                                </div>
+                            </div>
+                            <div class="topic-stats">
+                                <span>Posts: 321</span>
+                                <span>Views: 18.9k</span>
+                            </div>
+                        </li>
+                        <li class="topic">
+                            <div class="topic-info">
+                                <span class="topic-icon">♻️</span>
+                                <div>
+                                    <h3>Sustainability Tips</h3>
+                                    <p>Share your eco-friendly practices</p>
+                                </div>
+                            </div>
+                            <div class="topic-stats">
+                                <span>Posts: 445</span>
+                                <span>Views: 25.7k</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

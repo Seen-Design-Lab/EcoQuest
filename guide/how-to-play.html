@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>How to Play EcoQuest</title>
+        <!-- Add marked.js library -->
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <!-- Add Phosphor Icons -->
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                line-height: 1.6;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            code {
+                background-color: #f6f8fa;
+                padding: 0.2em 0.4em;
+                border-radius: 3px;
+            }
+
+            pre code {
+                display: block;
+                padding: 1em;
+                overflow-x: auto;
+            }
+
+            blockquote {
+                border-left: 4px solid #0366d6;
+                margin: 0;
+                padding-left: 20px;
+                color: #6a737d;
+            }
+
+            .back-button {
+                position: absolute;
+                top: 15px;
+                left: 20px;
+                margin-bottom: 0;
+                padding: 10px 20px;
+                background-color: #0366d6;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: all 0.2s ease;
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .back-button i {
+                font-size: 20px;
+            }
+
+            /* Add padding to content to prevent overlap */
+            #content {
+                padding-top: 90px;
+            }
+
+            .header-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 70px;
+                background-color: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                z-index: 99;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="header-container">
+            <button class="back-button" onclick="goBack()">
+                <i class="ph ph-arrow-left"></i>
+                Back
+            </button>
+        </div>
+
+        <!-- Container for Markdown content -->
+        <div id="content"></div>
+
+        <script>
+            // Add this function before your existing script
+            function goBack ()
+            {
+                window.history.back();
+            }
+
+            // Your README.md content
+            const markdown = `# 🎮 How to Play EcoQuest
+
+## 🚀 Getting Started
+
+1. **Launch the Game**
+   - Open your web browser
+   - Navigate to the EcoQuest website
+   - Click the "Play" button to begin
+
+2. **Character Creation**
+   - Choose your character's appearance
+   - Select your starting location
+   - Pick a specialization (Botanist, Conservationist, or Urban Planner)
+
+## 🎯 Basic Controls
+
+| Action | Key |
+|--------|-----|
+| Move Up | W or ↑ |
+| Move Down | S or ↓ |
+| Move Left | A or ← |
+| Move Right | D or → |
+| Interact | E |
+| Open Inventory | I |
+| Open Map | M |
+| Menu/Pause | ESC |
+
+## 💡 Core Gameplay Mechanics
+
+### Resource Management
+- 💧 **Water**: Collect from clean sources, use for plants
+- 🌱 **Seeds**: Gather from healthy plants, use for reforestation
+- ⚡ **Energy**: Generate from sustainable sources
+- 💰 **Green Points**: Earn by completing eco-friendly actions
+
+### Environmental Tasks
+1. **Plant Management**
+   - Plant trees in designated areas
+   - Water plants regularly
+   - Remove invasive species
+   - Harvest seeds from mature plants
+
+2. **Pollution Control**
+   - Clean up trash
+   - Install recycling bins
+   - Build water filtration systems
+   - Combat air pollution
+
+3. **Wildlife Protection**
+   - Set up wildlife sanctuaries
+   - Create animal corridors
+   - Monitor endangered species
+   - Prevent poaching
+
+## 🌟 Progression System
+
+### Levels and Experience
+- Complete tasks to gain experience
+- Level up to unlock new abilities
+- Earn achievements for milestone accomplishments
+
+### Skill Trees
+1. **Botany**
+   - Faster plant growth
+   - Better seed yields
+   - Advanced farming techniques
+
+2. **Conservation**
+   - Improved wildlife interaction
+   - Better resource management
+   - Enhanced pollution cleanup
+
+3. **Urban Planning**
+   - Efficient building placement
+   - Better community engagement
+   - Advanced recycling systems
+
+## 💪 Tips for Success
+
+1. **Resource Management**
+   - Always carry water
+   - Store extra seeds
+   - Maintain energy reserves
+   - Plan your routes efficiently
+
+2. **Task Prioritization**
+   - Focus on urgent environmental issues first
+   - Balance short-term and long-term goals
+   - Combine complementary tasks
+
+3. **Community Engagement**
+   - Talk to NPCs regularly
+   - Participate in community events
+   - Share resources with other players
+   - Join environmental campaigns
+
+## ❗ Important Notes
+
+- Save your progress regularly
+- Monitor your resource levels
+- Check the mission board daily
+- Stay updated with community events
+
+## 🤝 Multiplayer Features
+
+1. **Cooperative Play**
+   - Join forces with other players
+   - Participate in group clean-up events
+   - Share resources and knowledge
+   - Complete community challenges
+
+2. **Social Features**
+   - Chat with other players
+   - Form environmental groups
+   - Share achievements
+   - Trade resources
+
+## 🏆 Achievements
+
+Complete these challenges to earn special rewards:
+- 🌳 Plant 100 trees
+- ♻️ Recycle 1000 items
+- 🦋 Protect 50 endangered species
+- 💧 Clean 10 water sources
+- ⚡ Build 5 renewable energy stations
+
+Need more help? Join our [Discord community](https://discord.gg/ecoquest) or visit our [Forums](/site/forum/forum.html)`;
+
+            // Convert Markdown to HTML and insert into the page
+            document.getElementById( 'content' ).innerHTML = marked.parse( markdown );
+        </script>
+    </body>
+
+</html>

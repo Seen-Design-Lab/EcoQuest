@@ -1,0 +1,75 @@
+#quest-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--ui-background);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    z-index: 1000;
+}
+
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#quest-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#quest-choices button {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#quest-choices button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Button Styles */
+button {
+    font-family: 'Press Start 2P', cursive;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+#start-game {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#start-game:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#how-to-play {
+    background-color: #2196F3;
+    color: white;
+}
+
+#how-to-play:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

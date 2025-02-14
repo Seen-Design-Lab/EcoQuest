@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EcoQuest: The Green Adventure</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/game.css">
+        <link rel="stylesheet" href="css/ui.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="game-container">
+            <div id="menu-screen" class="screen">
+                <h1>EcoQuest</h1>
+                <h2>The Green Adventure</h2>
+                <button id="start-game">Start Game</button>
+                <button id="how-to-play" class="secondary" onclick="window.location.href='/guide/how-to-play.html'">How
+                    to Play</button>
+            </div>
+
+            <div id="game-screen" class="screen hidden">
+                <div id="game-ui">
+                    <div id="resources">
+                        <div class="resource">
+                            <img src="assets/water-drop.png" alt="Water">
+                            <span id="water-count">0</span>
+                        </div>
+                        <div class="resource">
+                            <img src="assets/seed.png" alt="Seeds">
+                            <span id="seed-count">0</span>
+                        </div>
+                        <div class="resource">
+                            <img src="assets/energy.png" alt="Energy">
+                            <span id="energy-count">100</span>
+                        </div>
+                    </div>
+                    <div id="score-container">Score: <span id="score">0</span></div>
+                </div>
+
+                <canvas id="game-canvas"></canvas>
+
+                <div id="inventory-panel">
+                    <h3>Inventory</h3>
+                    <div id="inventory-slots"></div>
+                </div>
+            </div>
+
+            <div id="quest-dialog" class="hidden">
+                <div class="dialog-content">
+                    <h3 id="quest-title"></h3>
+                    <p id="quest-description"></p>
+                    <div id="quest-choices"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load modules -->
+        <script type="module" src="js/main.js"></script>
+    </body>
+
+</html>
