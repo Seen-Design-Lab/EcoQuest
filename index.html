@@ -11,9 +11,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <!-- Update audio script path -->
+        <script src="./assets/audios/audio.js" defer></script>
     </head>
 
     <body>
+        <audio id="bg-music" preload="auto" loop>
+            <source src="./assets/audios/bg.mp3" type="audio/mp3">
+        </audio>
+
+        <video id="bg-video" autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/4318100/4318100-uhd_2560_1440_30fps.mp4"
+                type="video/mp4">
+        </video>
         <div id="game-container">
             <div id="menu-screen" class="screen">
                 <h1>EcoQuest</h1>
@@ -61,6 +71,7 @@
 
         <!-- Load modules -->
         <script type="module" src="js/main.js"></script>
+
     </body>
 
 </html>
